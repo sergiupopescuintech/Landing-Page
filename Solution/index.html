@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+
+    .container1 {
+        background-image:url("Layer 1.png");
+        background-repeat:no-repeat;
+        background-position:right top;
+      }
+    #Number {
+    			color:#3c5daa;
+    			font-size: 1.8rem;			/*2vw; 	*/
+    			font-family:Gotham-Medium;
+    			font-weight:bold;
+    			/*width:18%;*/
+    			text-decoration:none;
+    	}
+    #Title1 {
+      			font-family:Gotham-Pro-Light;
+      			font-size:3rem; 	/*2.5vw; */
+      			color:#3c5daa;
+      			/*width:65.5%;
+      			height:21.4%;*/
+      			margin:0 0 0 0;			/*35px*/
+            /*line-height:3.2rem;*/
+
+      	}
+    #Button1 {
+
+        			background-color:#f18c25;
+        			text-decoration:none;
+        			 		/*50px*/
+        			color:white;
+        			font-family:Gotham-Pro-Light;
+        			font-size:1.4rem; 			/*1.7vw */
+        			text-align:center;
+        			vertical-align:middle;
+        			display:inline-block;
+        			border-radius:50px;
+              	padding: 0.6rem 2.3rem	/*50px*/
+
+        	}
+    #Button1:hover {
+        	background-color:#ce761c;
+        }
+
+    .rowflex {
+        		display:flex;
+        		flex-wrap: wrap;
+        		justify-content:space-between;
+
+    }
+    .rowflex div {
+        		width: 31.5%;
+        		border: 1px solid #526fb3;
+        		border-radius:10px;
+        		text-align:center;
+
+        }
+    .symbol {
+      			display:block;
+      			margin-left:auto;
+      			margin-right:auto;
+      			padding-top:1.7rem;
+      			padding-left:3.5rem;
+      			padding-right:3.5rem;
+
+      			}
+    .logoinside {
+            				color: #3c5daa;
+            				font-size:1.1rem;
+                    margin: 0 0 0 0;
+            				font-family: Gotham-Medium;
+
+    }
+    .threetexts{
+      				color: #00000;
+      				font-size:0.9rem;
+      				font-family:Gotham-Light ;
+      				font-weight: bold;
+      				margin-bottom:4rem;
+      				padding-left:2.1rem;
+      				padding-right:2.1rem;
+
+      }
+    .undertextp1 {
+      				color:#526fb3;
+      				font-size:1.8rem;
+
+      				font-family:Gotham-Medium;
+      				font-weight:bold;
+      }
+    .undertextp2 {
+      					text-align:center;
+      					font-size:1rem;
+      					font-family:Gotham-Pro-Light;
+      					font-weight: bold;
+
+
+
+      }
+    .undertextp3 {
+      					text-align:center;
+      					font-size:1rem;
+      					color:#f18c25;
+      					font-family:Gotham-Pro-Light;
+      					font-weight:bold;
+
+      }
+
+    .container3 {
+      background-color:#3c5daa;
+    }
+    .Beforelisttext{
+            color:white;
+      			text-align:center;
+      			font-family: Gotham-Pro-Medium;
+
+      			font-size:2.2rem;
+      }
+    .editli {
+      width:50%;
+      float:left;
+      font-size:1.4rem;
+    	font-family: Gotham-Pro-Light;
+      color:white;
+      text-align:left;
+    }
+
+    .textdiv4{
+
+    	color:#526fb3;
+    	font-size:1.9rem;
+
+    	font-family:Gotham-Medium;
+    	font-weight:bold;
+
+    }
+    #Number2{
+    						color:#f18c25;
+                font-size:3.1rem;
+    						text-decoration:none;
+    						font-family:Gotham-Medium;
+    }
+
+    .container5 {
+      background-color:#ebebeb;
+    }
+    .div5text1{
+
+
+    	color:#526fb3;
+    	font-size:1.3rem;
+    	font-family:Gotham-Medium;
+    	font-weight:bold;
+
+    }
+    .div5text2{
+
+
+    	font-size: 0.9rem;
+    	font-family:Gotham-Pro-Light;
+    }
+
+    @font-face {
+          font-family: Gotham-Light;
+          src: url('GOTHAM-LIGHT.TTF') format('truetype');
+          src: url('GOTHAM-LIGHT.woff') format('woff'); / Pretty Modern Browsers /
+
+      }
+    @font-face {
+          font-family: Gotham-Pro-Light;
+          src: url(GothamProLight.ttf) format('truetype');
+          src: url('GothamProLight.woff') format('woff');
+
+      }
+    @font-face {
+          font-family: Gotham-Medium;
+          src: url(GOTHAM-MEDIUM.TTF) format('truetype');
+          src: url('GOTHAM-MEDIUM.woff') format('woff');
+
+      }
+    @font-face{
+        font-family:Gotham-Pro-Medium;
+        src: url(GothaProMed.otf) ;
+        src: url('GothamProLight.woff') format('woff');
+
+      }
+
+    @media only screen and (min-width:1200px)
+    {
+      #Title1 {
+              line-height:3.2rem;
+        	}
+    }
+    @media only screen and (max-width:1200px)
+    {
+       .container1{
+         background-image:none;
+       }
+    }
+    @media only screen and (max-width:1700px) and (min-width:1600px)
+    {
+      .container1
+      {
+        background-position: 800px;
+      }
+    }
+    @media only screen and (max-width:1600px) and (min-width:1500px)
+    {
+      .container1
+      {
+        background-position: 750px;
+      }
+    }
+    @media only screen and (max-width:1500px) and (min-width:1400px)
+    {
+      .container1
+      {
+        background-position: 710px;
+      }
+    }
+    @media only screen and (max-width:1400px) and (min-width:1300px)
+    {
+      .container1
+      {
+        background-position: 630px;
+      }
+    }
+    @media only screen and (max-width:1300px) and (min-width:1200px)
+    {
+      .container1
+      {
+        background-position: 570px;
+
+      }
+    }
+    @media only screen and (max-width:1200px) and (min-width:1001px)
+    {
+      .Beforelisttext{
+        			font-size:1.5rem;
+        }
+      .editli {
+
+        font-size:1.2rem;
+
+      }
+    }
+    @media only screen and (max-width:1000px) and (min-width:600px)
+    {
+      #Number{
+          font-size:1.6rem;
+        }
+      #Title1{
+          font-size:2.2rem;
+        }
+      #Button1{
+          font-size:1.2rem;
+        }
+      .threetexts{
+
+          				font-size:0.9rem;
+          				font-weight: bold;
+          				margin-bottom:4rem;
+          				padding-left:2.1rem;
+          				padding-right:2.1rem;
+
+          }
+      .rowflex div{
+            margin-left: auto;
+            margin-right: auto;
+            width:80%;
+            margin-bottom:1rem;
+          }
+      .undertextp1 {
+            				font-size:1.1rem;
+      }
+      .undertextp2 {
+            					font-size:0.9rem;
+      }
+      .undertextp3 {
+            					font-size:0.9rem;
+      }
+      .Beforelisttext{
+        			font-size:1.3rem;
+        }
+      .editli {
+        width:80%;
+        font-size:1.2rem;
+
+      }
+      .textdiv4{
+      	font-size:1.1rem;
+      }
+      #Number2{
+
+                  font-size:2rem;
+      }
+      .div5text1{
+      	font-size:0.8rem;
+      }
+      .div5text2{
+      	font-size: 0.7rem;
+      	font-family:Gotham-Pro-Light;
+      }
+    }
+    @media only screen and (max-width:600px) and (min-width:480px)
+    {
+      #Number{
+        font-size:1.5rem;
+      }
+      #Title1{
+        font-size:1.8rem;
+      }
+      #Button1{
+        font-size:0.8rem;
+      }
+      .threetexts{
+
+          				font-size:0.9rem;
+          				font-weight: bold;
+          				margin-bottom:4rem;
+          				padding-left:2.1rem;
+          				padding-right:2.1rem;
+
+          }
+      .rowflex div{
+            margin-left: auto;
+            margin-right: auto;
+            width:80%;
+            margin-bottom:1rem;
+          }
+      .undertextp1 {
+            				font-size:1.1rem;
+
+      }
+      .undertextp2 {
+            					font-size:0.8rem;
+                      padding:1rem;
+
+      }
+      .undertextp3 {
+            					font-size:0.8rem;
+      }
+      .Beforelisttext{
+        			font-size:1rem;
+        }
+      .editli {
+        width:80%;
+        font-size:1rem;
+
+      }
+      .textdiv4{
+      	font-size:1.1rem;
+      }
+      #Number2{
+
+                  font-size:1.5rem;
+      }
+      .div5text1{
+      	font-size:1rem;
+      }
+      .div5text2{
+      	font-size: 0.5rem;
+      	font-family:Gotham-Pro-Light;
+      }
+    }
+    @media only screen and (max-width:480px) and (min-width:400px)
+    {
+      #Number{
+        font-size:1.4rem;
+      }
+      #Title1{
+        font-size:1.4rem;
+      }
+      #Button1{
+        font-size:0.8rem;
+      }
+      .threetexts{
+
+          				font-size:0.9rem;
+          				font-weight: bold;
+          				margin-bottom:4rem;
+          				padding-left:2.1rem;
+          				padding-right:2.1rem;
+
+          }
+      .rowflex div{
+            margin-left: auto;
+            margin-right: auto;
+            width:80%;
+            margin-bottom:1rem;
+          }
+      .undertextp1 {
+            				font-size:1.1rem;
+
+      }
+      .undertextp2 {
+            					font-size:0.8rem;
+                      padding:1rem;
+
+      }
+      .undertextp3 {
+            					font-size:0.8rem;
+      }
+      .Beforelisttext{
+        			font-size:0.7rem;
+        }
+      .editli {
+        width:80%;
+        font-size:0.8rem;
+
+      }
+      .textdiv4{
+      	font-size:0.8rem;
+      }
+      #Number2{
+
+                  font-size:1rem;
+      }
+      .div5text1{
+      	font-size:1rem;
+      }
+      .div5text2{
+      	font-size: 0.5rem;
+      	font-family:Gotham-Pro-Light;
+      }
+    }
+    @media only screen and (max-width:400px)
+    {
+      #Number{
+        font-size:1rem;
+      }
+      #Title1{
+        font-size:1.2rem;
+      }
+      #Button1{
+        font-size:0.8rem;
+      }
+      .threetexts{
+
+          				font-size:0.7rem;
+          				font-weight: bold;
+          				margin-bottom:4rem;
+          				padding-left:2.1rem;
+          				padding-right:2.1rem;
+
+          }
+      .rowflex div{
+            margin-left: auto;
+            margin-right: auto;
+            width:80%;
+            margin-bottom:1rem;
+          }
+      .undertextp1 {
+            				font-size:1.1rem;
+
+      }
+      .undertextp2 {
+            					font-size:0.8rem;
+                      padding:1rem;
+
+      }
+      .undertextp3 {
+            					font-size:0.8rem;
+      }
+      .Beforelisttext{
+        			font-size:0.8rem;
+        }
+      .editli {
+        width:80%;
+        font-size:0.8rem;
+
+      }
+      .textdiv4{
+      	font-size:0.8rem;
+      }
+      #Number2{
+
+                  font-size:1rem;
+      }
+      .div5text1{
+      	font-size:1rem;
+      }
+      .div5text2{
+      	font-size: 0.5rem;
+      	font-family:Gotham-Pro-Light;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="container-fluid container1">
+    <div class="row">
+          <div class="col pr-0   ml-xl-5">
+            <img src="Line up.png" class="img-fluid w-100 align-top" >
+          </div>
+    </div>
+    <div class="container mt-2   mt-xl-4 ">
+        <div class="row  align-items-center" >
+            <div class="text-center col-12   col-xl-4 text-xl-left pr-xl-3 ">
+                <img src="Logo copy.png" class="img-fluid mr-xl-5" >
+            </div>
+            <div class="text-center col-12 mt-4   col-xl-3 mt-xl-0">
+              <a id="Number" href="tel:+40770921650" > 800-697-0109</a>
+            </div>
+        </div>
+        <div class="row mt-4 mb-2 mt-xl-5 mb-xl-2" >
+            <div class="text-center col-12   text-xl-left col-xl-8">
+              <p id="Title1" >Undergraduate and Graduate </p>
+  						<p id="Title1" >Private Student Loans</p>
+            </div>
+        </div>
+        <div class="row" >
+            <div class=" text-center col-12   text-xl-left col-xl-6">
+              <img src="Rectangle 7 copy 6.png" class="img-fluid">
+            </div>
+        </div>
+        <div class="row  text-center text-xl-left mb-xl-3 mt-3" >
+            <div class=" col-12    offset-xl-1 col-xl-3 mt-xl-3 ">
+                <a id="Button1" href="http://www.intechdynamics.com/" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="pt-5 col pr-0 pl-0 pt-xl-3 pr-xl-0">
+          <img src="Line dn.png" class="img-fluid w-100 w-xl-100 align-bottom">
+        </div>
+    </div>
+</div>
+<div class="container pt-5">
+  <div class="row mb-5">
+      <div class="rowflex">
+				<div>
+				<img class="symbol " src="Vector Smart Object2.png">
+        <p class="logoinside mt-3">
+            Flexible
+        </p>
+        <p  class="logoinside mb-3">
+            Terms & Conditions
+        </p>
+				<img class="blueline" src="Vector Smart Object4.png">
+				<p class="threetexts mt-3">
+            With low rates, no origination fees, and no
+             application fees, we offer some of the
+            lowest-cost loan options for students. Our
+            goal is to provide you with the lowest cost
+               option based on your needs.
+				</p>
+				</div>
+
+				<div>
+				<img class="symbol" src="Vector Smart Object.png">
+        <p class="logoinside mt-3">
+            Flexible
+        </p>
+        <p  class="logoinside mb-3">
+            Terms & Conditions
+        </p>
+				<img class="blueline" src="Vector Smart Object4.png">
+				<p class="threetexts mt-3">
+            You have the option to pay while in school, defer
+             until after graduation, or make full payments
+            while in school. Loans can also be used to pay
+            for books and education-related expenses, like
+            off-campus housing. Take advantage of these
+               flexible terms by applying today!
+				</p>
+				</div>
+
+				<div>
+				<img class="symbol" src="Vector Smart Object3.png">
+        <p class="logoinside mt-3">
+            Refinancing Student Loans
+        </p>
+        <p class="logoinside mb-3">
+            to Save You Money
+        </p>
+				<img class="blueline" src="Vector Smart Object4.png">
+				<p  class="threetexts mt-3">
+              If you have Federal PLUS loans, you probably
+               are locked in at a high rate. We help our
+              members refinance student loans to lower fixed
+              rates and consolidate multiple loans into one
+               convenient paymentthat could save you
+               money. Apply online today to refinance or
+                  consolidate your loans!
+				</p>
+				</div>
+			</div>
+  </div>
+  <div class="row">
+    <div class="offset-2 col-8 text-center">
+      <p class="undertextp1">
+        Why Choose Us for Your Private Student Loan?
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-center">
+      <p class="undertextp2 mb-0">
+        Our goal is to help you finance the cost of attending the school of your choice. This is why Workers Credit Union has partnered with cuStudentChoice, a program that provides information for finding colleges, scholarship opportunities, and competitive private student loans. Together, we are committed to helping you find the best financing option.
+      </p>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="text-center col-12">
+      <p class="undertextp3">
+        Apply today for your student loan or consolidate your student loans today!
+      </p>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-12 text-center pb-xl-4">
+      <a id="Button1" href="http://www.intechdynamics.com/" target="_blank">Apply Now</a>
+    </div>
+  </div>
+</div>
+<div class="container-fluid container3">
+  <div class="container">
+      <div class="row">
+        <div class="offset-1 col-10 text-center">
+            <p class="Beforelisttext pt-5">
+                Fund The Financial Gap Between Federal Funding and Aid or Refinance Your Student Loans:
+            </p>
+        </div>
+      </div>
+      <div class="row mb-5">
+            <div class="offset-1 col-10 pl-5 text-center">
+              <ul>
+                  <li class="editli">Undergraduate Student Loans</li>
+                  <li class="editli">Private Consolidation Loans</li>
+                  <li class="editli">Graduate Business Student Loans</li>
+                  <li class="editli">PLUS Loan Refinance</li>
+                </ul>
+            </div>
+      </div>
+      <div class="row ">
+            <div class="offset-1 col-10">
+               <img  src="Rectangle 7 copy 3.png" class="img-fluid pb-5">
+            </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="text-center col-12">
+        <p class="textdiv4 mt-5 mb-0">
+          Call us Today to Find Out More or Apply Online to Get Fast Approval!
+        </p>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="offset-3 col-6 text-center">
+        <p class="textdiv4 mt-4">
+          <a id="Number2" href="tel:+40770921650">800-697-0109</a>
+        </p>
+      </div>
+    </div>
+</div>
+<div class="container-fluid container5">
+    <div class="container pt-5 ">
+      <div class="row align-items-center pt-xl-5">
+        <div class="text-center col-12 offset-md-1 col-md-3">
+          <img src="Logo copy.png" class=" img-fluid">
+        </div>
+        <div class="text-center col-12 mt-5 mt-md-0 offset-md-4 col-md-3 ">
+          <p class="div5text1 mb-0"> Banking that works.</p>
+        </div>
+      </div>
+      <div class="row mt-5 mb-3">
+            <div class="offset-1 col-10 text-center">
+                	<p class="div5text2">© 2016 Workers Credit Union | PO Box 8207, Fitchburg MA, 01420 | Phone: 978-345-1021 | Routing # 211382931 | About Us</p>
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center pb-4">
+          <img src="logo_ehl.png" class="img-fluid">
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
